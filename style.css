@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Lora', serif;
 }
@@ -24,7 +28,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 10px;
-
+    transition: background-color 0.3 ease, color 0.3 ease
     
 
 }
@@ -34,7 +38,7 @@ header {
     font-size: 30px;
     font-weight: 500;
     margin-left: 200px;
-
+    transition: color 0.3s ease;
     
 }
 
@@ -61,11 +65,22 @@ header {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 450;
+    transition: color 0.3s ease;
 }
-
+.navbar.scrolled ul li a:hover,
 .navbar ul li a:hover {
     color: #f5af00; /* Changes text color to yellow on hover */
     background-color: transparent; /* Keeps the background unchanged */
+}
+
+.navbar.scrolled {
+    background-color: white;
+    box-shadow: 0 1px 1px rgba(157, 157, 157, 0.462);
+}
+
+.navbar.scrolled h1,
+.navbar.scrolled ul li a {
+    color: rgb(67, 67, 67);  /* text switches to black */
 }
 
 .hero {
@@ -140,6 +155,49 @@ header {
     margin-bottom: 20px;
 }
 
+.service-box h6 {
+    font-size: 14px;
+    font-weight: 400px;
+    color: #000000;
+    margin-bottom: 20px;
+    font-family: 'Poppins'
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.service-box {
+    width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background: transparent;
+    
+}
+
+
+.service-box p {
+    font-size: 14px;
+    color: #999999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .pricing {
     width: 100%;
     height: 100vh;
@@ -148,6 +206,20 @@ header {
     text-align: center;
     background-color: #d1d1d1;
 }
+
+
+.quote {
+    width: 100%;
+    height: 10vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    background-color: #ad7f36;
+}
+
+
+
+
 
 .skills {
     width: 100%;

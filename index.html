@@ -6,39 +6,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My landing page</title>
-    <!-- CHANGE THESE VALUES -->
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- ADD YOUR CODE HERE --> 
+    
     <header>
       <nav class="navbar">    
           <h1>Western</h1>
           <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
           </ul>
       </nav>
   </header>
   
 
-  <section class="hero">
+  <section class="hero" id="home">
       <h2>Getting you to your destination</h2>
       <h3>Take a step towards your goals with us</h3>
       <a href="#" class="hero-button">Reach out</a>
   </section>
 
-  <section class="services">
+  <section class="services" id="services">
       <h4>Our services</h4>
       <h5>Lorem ipsum dolor sit amet consectetu</h5>
+      <div class="service-container">
+        <div class="service-box">
+            <h6>Service 1</h6>
+            <p>Brief description of the first service.</p>
+        </div>
+        <div class="service-box">
+            <h6>Service 2</h6>
+            <p>Brief description of the second service.</p>
+        </div>
+        <div class="service-box">
+            <h6>Service 3</h6>
+            <p>Brief description of the third service.</p>
+        </div>
+        <div class="service-box">
+            <h6>Service 4</h6>
+            <p>Brief description of the fourth service.</p>
+        </div>
+    </div>
 
   </section>
 
-  <section class="pricing">
+  <section class="pricing" id="pricing">
+    <h7> Experts in the field for approximately 10 years!</h5>
+  </section>
+
+
+  <section class="quote">
 
   </section>
 
@@ -51,7 +73,26 @@
   <section class="routes">
   
   </section>
+  
+  <section class="contact" id="contact">
+  </section>
 
+
+
+<script>
+  const navbar = document.querySelector('.navbar');
+  const hero = document.querySelector('.hero');
+
+  window.addEventListener('scroll', () => {
+    const heroHeight = hero.offsetHeight;
+
+    if (window.scrollY > heroHeight - 80) { // adjust 80 to trigger sooner/later
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
 
   </body>
 </html>
