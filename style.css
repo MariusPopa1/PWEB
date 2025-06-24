@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+.bus-icon,
+.person-icon,
+.package-icon,
+.car-icon {
+  color: #7e6326; /* golden brown */
+  font-size: 32px; /* optional: set size */
+  margin: 10px; /* optional: spacing between icons */
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -30,7 +39,6 @@ header {
     padding: 10px 10px;
     transition: background-color 0.3 ease, color 0.3 ease
     
-
 }
 
 .navbar h1 {
@@ -67,6 +75,7 @@ header {
     font-weight: 450;
     transition: color 0.3s ease;
 }
+
 .navbar.scrolled ul li a:hover,
 .navbar ul li a:hover {
     color: #f5af00; /* Changes text color to yellow on hover */
@@ -140,28 +149,38 @@ header {
     text-align: center;
     background-color: rgb(255, 255, 255);
 }
-.services h4 {
-    font-size: 42px;
-    font-weight: 400px;
+
+.services h2 {
+    font-size: 34px;
+    font-weight: 400;
     color: #000000;
     margin-bottom: 20px;
-    position: center;
+
     font-family: 'Poppins';
 }
-.services h5 {
+
+.section-subtitle {
     font-size: 14px;
-    font-weight: 400px;
+    font-weight: 400;
     color: #727272;
     margin-bottom: 20px;
+    font-family: 'Poppins';
+    width: 35%;
+    margin: 0 auto;
+    text-align: center;
+    line-height:1.6;
 }
 
-.service-box h6 {
-    font-size: 14px;
-    font-weight: 400px;
+.service-box h3 {
+    font-size: 18px;
+    font-weight: 400;
     color: #000000;
     margin-bottom: 20px;
-    font-family: 'Poppins'
+    font-family: 'Poppins';
+    line-height: 1.6;
 }
+
+
 
 .service-container {
     display: flex;
@@ -184,6 +203,7 @@ header {
 .service-box p {
     font-size: 14px;
     color: #999999;
+    line-height: 1.6; /* or use something like 22px */
 }
 
 
