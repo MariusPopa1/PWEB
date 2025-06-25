@@ -15,10 +15,18 @@
     <header>
       <nav class="navbar">    
           <h1>Western</h1>
+
+          <button class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+              <span class="burger-bar"></span>
+              <span class="burger-bar"></span>
+              <span class="burger-bar"></span>
+            </button>
           <ul>
+
+            
               <li><a href="#home">Home</a></li>
               
-              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#stats">Pricing</a></li>
               <li><a href="#services">Services</a></li>
               <li><a href="#testimonials">Testimonials</a></li>
               <li><a href="#contacts">Contacts</a></li>
@@ -64,7 +72,7 @@
 
   </section>
 
-<section class="location-section">
+<section class="location-section" id="stats">
   <div class="location-inner">
     <div class="location-left">
       <h2>Our Reach Across Europe</h2>
@@ -203,7 +211,23 @@
       navbar.classList.remove('scrolled');
     }
   });
+
 </script>
+
+<script>
+  const burger = document.querySelector('.burger');
+  const navMenu = document.querySelector('.navbar ul');
+
+  burger.addEventListener('click', () => {
+    const expanded = burger.getAttribute('aria-expanded') === 'true' || false;
+    burger.setAttribute('aria-expanded', !expanded);
+    navMenu.classList.toggle('show');
+  });
+</script>
+
+
+
+
 
   </body>
 </html>

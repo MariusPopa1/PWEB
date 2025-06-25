@@ -5,14 +5,6 @@
     box-sizing: border-box;
 }
 
-.bus-icon,
-.person-icon,
-.package-icon,
-.car-icon {
-  color: #7e6326; 
-  font-size: 32px; 
-  margin: 5px; 
-}
 
 html {
     scroll-behavior: smooth;
@@ -32,29 +24,28 @@ header {
 
 
 .navbar {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 20px;
-    transition: background-color 0.3 ease, color 0.3 ease
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  flex-wrap: wrap;
 }
 
 .navbar h1 {
-    color: #ffffff;
-    font-size: 36px;
-    font-weight: 500;
-    margin-left: 200px;
-    transition: color 0.3s ease;
-    
+  color: #ffffff;
+  font-size:clamp(24px, 2.5vw, 36px);
+  font-weight: 500;
+  margin-left: 0; 
+  flex: 1; 
+  padding-left: 20px; 
+  transition: color 0.3s ease;
 }
 
 .navbar ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 200px;
+    margin-right: 50px;
 }
 
 .navbar ul li {
@@ -92,18 +83,73 @@ header {
     color: rgb(67, 67, 67);  
 }
 
-.hero {
-    width: 100%;
-    height: 100vh;
-    display: flex;
+
+
+
+
+.burger {
+  display: none; 
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto; 
+  transition: color 0.3s ease;
+  color: #7e6326;
+}
+
+.burger:hover,
+.burger:focus {
+  color: #ad7f36; 
+}
+
+.burger-bar {
+  width: 100%;
+  height: 3px;
+  background-color: currentColor;
+  border-radius: 2px;
+}
+
+
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none; 
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url('images/test.JPG');
-    background-size: cover;
-    background-position: center;
-  
- 
+    background-color: rgb(131, 131, 131);
+    position: absolute;
+    top: 70px; 
+    right: -30px; 
+    width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 100;
+  }
+  .navbar ul.show {
+    display: flex;
+  }
+  .burger {
+    display: flex;
+  }
+}
+
+
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('images/test.JPG');
+  background-size: cover;
+  background-position: center;
+  text-align: center; /* Important for small screens */
+  padding: 0 20px; /* Prevent text overflow on small screens */
 }
 
 .hero-content {
@@ -112,26 +158,26 @@ header {
     align-items: center; 
 }
 
+
 .hero h2 {
-    font-size: 45px;
-    font-weight: 400;
-    color: #ffffff;
-    margin-bottom: 40px;
-    font-family: 'Poppins';
+  font-size: clamp(24px, 3vw, 45px);
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  word-break: break-word;
 }
 
 .hero h3 {
-    font-size: 24px; 
-    font-weight: normal;
-    color: #999999;
-    font-family: 'Poppins';
+  font-size: clamp(14px, 1.2vw, 20px);
+  color: #ddd;
+  text-align: center;
 }
 
 .hero-button {
     display: inline-block;
-    padding: 15px 40px;
+    font-size: clamp(14px, 1.2vw, 18px);
+    padding: clamp(12px, 1vw, 15px) clamp(24px, 2vw, 40px);
     margin-top: 40px;
-    font-size: 18px;
     font-weight: 400;
     color: rgb(255, 255, 255);
     background-color: #7E6326;
@@ -145,10 +191,12 @@ header {
 .hero-button:hover {
     background-color: rgb(30, 30, 30);
 }
+
+
+
 .services {
-     width: 100%;
-    /* height: 80vh; REMOVE THIS */
-    min-height: 80vh; /* Optional: keeps it at least 80% tall, but grows with content */
+    width: 100%;
+    min-height: 80vh; 
     padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
@@ -156,20 +204,19 @@ header {
 }
 
 .services h2 {
-    font-size: 40px;
+    font-size: clamp(30px,2.5vw,40px);
     font-weight: 400;
     color: #000000;
     margin-bottom: 20px;
-
     font-family: 'Poppins';
 }
 
 .section-subtitle {
-    font-size: 14px;
     font-weight: 400;
     color: #727272;
     margin-bottom: 20px;
     font-family: 'Poppins';
+    font-size: clamp(13px, 1.5vw, 16px);
     width: 35%;
     margin: 0 auto;
     text-align: center;
@@ -177,7 +224,8 @@ header {
 }
 
 .service-box h3 {
-    font-size: 18px;
+  
+    font-size: clamp(16px, 1.5vw, 18px);
     font-weight: 400;
     color: #000000;
     margin-bottom: 20px;
@@ -197,7 +245,7 @@ header {
 }
 
 .service-box {
-    width: 250px;
+    width: 40%;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -207,10 +255,21 @@ header {
 
 
 .service-box p {
-    font-size: 14px;
+    font-size: clamp(12px, 1.2vw, 14px);
     color: #999999;
     line-height: 1.6; 
 }
+
+
+.bus-icon,
+.person-icon,
+.package-icon,
+.car-icon {
+  color: #7e6326; 
+  font-size: clamp(26px,2.3vw,32px); 
+  margin: 5px; 
+}
+
 
 
 
@@ -225,14 +284,14 @@ header {
 }
 
 .reviews h2 {
-  font-size: 32px;
+  font-size: clamp(28px, 2.5vw, 40px);
   font-family: 'Poppins';
   color: #000000;
   margin-bottom: 40px;
 }
 
 .reviews-subtitle {
-  font-size: 16px;
+  font-size: clamp(14px, 1.5vw, 16px);
   font-family: 'Poppins';
   color: #727272;
   margin-bottom: 40px;
@@ -258,7 +317,7 @@ header {
 }
 
 .review-text {
-  font-size: 20px;
+  font-size: clamp(16px, 1.8vw, 20px);
   font-family: 'Lora', serif;
   font-style: oblique;
   color: #333;
@@ -267,7 +326,7 @@ header {
 }
 
 .review-author {
-  font-size: 14px;
+  font-size: clamp(12px, 1vw, 14px);
   font-weight: 600;
   color: #7e6326;
   font-family: 'Poppins';
@@ -316,13 +375,13 @@ header {
 }
 
 .location-left h2 {
-  font-size: 32px;
+  font-size: clamp(22px, 2.5vw, 32px);
   margin-bottom: 20px;
   font-weight: 600;
 }
 
 .location-left p {
-  font-size: 16px;
+  font-size: clamp(14px, 1.4vw, 16px);
   line-height: 1.6;
   max-width: 400px;
 }
@@ -339,13 +398,13 @@ header {
   text-align: center;
   font-weight: 600;
   margin-bottom: 8px;
-  font-size: 18px;
+  font-size: clamp(12px, 1.5vw, 18px);
 }
 
 .bar-container {
   display: flex;
-  height: 10px;      /* reduced from 24px to 10px */
-  border-radius: 5px; /* smaller radius to match thinner bars */
+  height: 10px;      
+  border-radius: 5px; 
   overflow: hidden;
   box-shadow: inset 0 0 5px #ccc;
   margin-bottom: 6px;
@@ -354,26 +413,25 @@ header {
 
 .bar {
   height: 100%;
-  border-radius: 5px 0 0 5px; /* Keep rounded left edge for passenger bar */
+  border-radius: 5px 0 0 5px; 
 }
 
-/* Optional: Remove right border radius on passenger bar so packages bar is flush */
+
 .passengers {
-  background-color: #d3a73e; /* golden brown */
+  background-color: #d3a73e; 
   border-radius: 5px 0 0 5px; 
 }
 
 .packages {
-  background-color: #2f6a18; /* blue */
-  border-radius: 0 5px 5px 0; /* rounded on right edge */
+  background-color: #2f6a18; 
+  border-radius: 0 5px 5px 0; 
 }
 
 .bar-labels.top-labels {
   display: flex;
   justify-content: space-between;
-  max-width: 400px; /* same as bar container width */
-  margin: 0 auto 12px; /* center it and add bottom margin */
-  font-size: 14px;
+  max-width: 700px; 
+  font-size: clamp(8px, 1.4vw, 12px);
   font-weight: 600;
   color: #666;
 }
@@ -382,22 +440,7 @@ header {
 
 /* Responsive */
 
-@media (max-width: 768px) {
-  .location-section {
-    flex-direction: column;
-    padding: 40px 20px;
-  }
-  .location-left,
-  .location-right {
-    flex: 1 1 100%;
-  }
-  .location-left p {
-    max-width: 100%;
-  }
-  .bar-labels {
-    max-width: 100%;
-  }
-}
+
 
 
 .quote {
@@ -414,20 +457,20 @@ header {
 .quote h2 {
   color: white;
   font-family: 'Poppins';
-  font-size: 30px;
+  font-size: clamp(22px, 2.5vw, 30px);
   font-weight: 400;
   margin-bottom: 30px;
 }
 
 .quote-button {
-  padding: 15px 40px;
+  font-size: clamp(10px, 1vw, 12px);
+  padding: clamp(10px, 1vw, 15px) clamp(24px, 2vw, 40px);
   background-color: transparent;
   color: white;
   text-decoration: none;
   border-radius: 20px;
   font-family: 'Poppins';
   font-weight: 500;
-  font-size: 12px;
   transition: background 0.3s ease, color 0.3s ease;
   text-transform: uppercase;
   border: 1px solid white;
@@ -479,14 +522,14 @@ header {
 }
 
 .contact-icon {
-  font-size: 45px;
+  font-size: clamp(28px,3vw, 45px);
   color: #7e6326;
   margin-bottom: 30px;
 }
 
 .contact-title {
   font-family: 'Poppins';
-  font-size: 18px;      
+  font-size: clamp(16px, 1.4vw, 18px); 
   font-weight: 500;
   margin-bottom: 12px;  
   color: #4d4d4d;
@@ -494,7 +537,7 @@ header {
 
 .contact-item p {
   font-family: 'Poppins';
-  font-size: 14px;
+  font-size: clamp(12px, 1.3vw, 14px);
   color: #565656;
   line-height:1.8;
 }
@@ -510,14 +553,13 @@ header {
 .credits-container {
   max-width: 1200px;
   margin: 0 auto;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
   flex-wrap: wrap;
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: clamp(12px, 1.5vw, 14px);
   color: #555;
 }
 
