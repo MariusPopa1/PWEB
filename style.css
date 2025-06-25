@@ -1,4 +1,4 @@
-/* add your CSS here */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,9 +9,9 @@
 .person-icon,
 .package-icon,
 .car-icon {
-  color: #7e6326; /* golden brown */
-  font-size: 32px; /* optional: set size */
-  margin: 10px; /* optional: spacing between icons */
+  color: #7e6326; 
+  font-size: 32px; 
+  margin: 5px; 
 }
 
 html {
@@ -23,27 +23,27 @@ body {
 }
 
 header {
-    position: fixed; /* Ensures it stays on top */
+    position: fixed; 
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 10; /* Keeps the navbar above other elements */
+    z-index: 10; 
 }
 
-/* Navbar styling */
+
 .navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10px;
+    padding: 20px 20px;
     transition: background-color 0.3 ease, color 0.3 ease
     
 }
 
 .navbar h1 {
     color: #ffffff;
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 500;
     margin-left: 200px;
     transition: color 0.3s ease;
@@ -78,8 +78,8 @@ header {
 
 .navbar.scrolled ul li a:hover,
 .navbar ul li a:hover {
-    color: #f5af00; /* Changes text color to yellow on hover */
-    background-color: transparent; /* Keeps the background unchanged */
+    color: #f5af00; 
+    background-color: transparent; 
 }
 
 .navbar.scrolled {
@@ -89,7 +89,7 @@ header {
 
 .navbar.scrolled h1,
 .navbar.scrolled ul li a {
-    color: rgb(67, 67, 67);  /* text switches to black */
+    color: rgb(67, 67, 67);  
 }
 
 .hero {
@@ -108,8 +108,8 @@ header {
 
 .hero-content {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center elements */
+    flex-direction: column; 
+    align-items: center; 
 }
 
 .hero h2 {
@@ -121,7 +121,7 @@ header {
 }
 
 .hero h3 {
-    font-size: 24px; /* Smaller font size */
+    font-size: 24px; 
     font-weight: normal;
     color: #999999;
     font-family: 'Poppins';
@@ -134,12 +134,16 @@ header {
     font-size: 18px;
     font-weight: 400;
     color: rgb(255, 255, 255);
-    background-color: #7E6326; /* Blue button */
+    background-color: #7E6326; 
     border-radius: 5px;
     text-decoration: none;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3 ease;
     font-family: 'Poppins';
     letter-spacing: 0.3px;
+}
+
+.hero-button:hover {
+    background-color: rgb(30, 30, 30);
 }
 .services {
     width: 100%;
@@ -203,7 +207,7 @@ header {
 .service-box p {
     font-size: 14px;
     color: #999999;
-    line-height: 1.6; /* or use something like 22px */
+    line-height: 1.6; 
 }
 
 
@@ -211,7 +215,74 @@ header {
 
 
 
+.reviews {
+  width: 100%;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 120px 120px;
+}
 
+.reviews h2 {
+  font-size: 32px;
+  font-family: 'Poppins';
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.reviews-subtitle {
+  font-size: 16px;
+  font-family: 'Poppins';
+  color: #727272;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.review-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+}
+
+.review-box {
+  background-color: #f7f7f7;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.review-text {
+  font-size: 15px;
+  font-family: 'Lora', serif;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.review-author {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7e6326;
+  font-family: 'Poppins';
+}
+
+
+.review-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.review-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
 
 
@@ -229,15 +300,42 @@ header {
 
 
 .quote {
-    width: 100%;
-    height: 10vh;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    text-align: center;
-    background-color: #ad7f36;
+  width: 100%;
+  padding: 60px ; 
+  text-align: center;
+  background-color: #7E6326;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+.quote h2 {
+  color: white;
+  font-family: 'Poppins';
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
 
+.quote-button {
+  padding: 15px 40px;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 12px;
+  transition: background 0.3s ease, color 0.3s ease;
+  text-transform: uppercase;
+  border: 1px solid white;
+}
+
+.quote-button:hover {
+  background-color: white;
+  color: #7E6326;
+}
 
 
 
