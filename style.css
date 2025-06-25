@@ -116,7 +116,7 @@ header {
     font-size: 45px;
     font-weight: 400;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     font-family: 'Poppins';
 }
 
@@ -129,13 +129,13 @@ header {
 
 .hero-button {
     display: inline-block;
-    padding: 12px 24px;
-    margin-top: 20px;
+    padding: 15px 40px;
+    margin-top: 40px;
     font-size: 18px;
     font-weight: 400;
     color: rgb(255, 255, 255);
-    background-color: #7E6326; 
-    border-radius: 5px;
+    background-color: #7E6326;
+    border-radius: 20px;
     text-decoration: none;
     transition: background 0.3s ease, color 0.3 ease;
     font-family: 'Poppins';
@@ -146,8 +146,9 @@ header {
     background-color: rgb(30, 30, 30);
 }
 .services {
-    width: 100%;
-    height: 80vh;
+     width: 100%;
+    /* height: 80vh; REMOVE THIS */
+    min-height: 80vh; /* Optional: keeps it at least 80% tall, but grows with content */
     padding-top: 100px;
     padding-bottom: 100px;
     text-align: center;
@@ -155,7 +156,7 @@ header {
 }
 
 .services h2 {
-    font-size: 34px;
+    font-size: 40px;
     font-weight: 400;
     color: #000000;
     margin-bottom: 20px;
@@ -180,6 +181,7 @@ header {
     font-weight: 400;
     color: #000000;
     margin-bottom: 20px;
+    margin-top:20px;
     font-family: 'Poppins';
     line-height: 1.6;
 }
@@ -256,8 +258,9 @@ header {
 }
 
 .review-text {
-  font-size: 15px;
+  font-size: 20px;
   font-family: 'Lora', serif;
+  font-style: oblique;
   color: #333;
   margin-bottom: 15px;
   line-height: 1.5;
@@ -289,13 +292,111 @@ header {
 
 
 
-.pricing {
-    width: 100%;
-    height: 100vh;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    text-align: center;
-    background-color: #d1d1d1;
+.location-section {
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 80px 0; 
+}
+
+.location-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 60px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.location-left {
+  flex: 1 1 40%;
+}
+
+.location-left h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.location-left p {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 400px;
+}
+
+.location-right {
+  flex: 1 1 55%;
+}
+
+.country-line {
+  margin-bottom: 30px;
+}
+
+.country-label {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.bar-container {
+  display: flex;
+  height: 10px;      /* reduced from 24px to 10px */
+  border-radius: 5px; /* smaller radius to match thinner bars */
+  overflow: hidden;
+  box-shadow: inset 0 0 5px #ccc;
+  margin-bottom: 6px;
+  background-color: #eee;
+}
+
+.bar {
+  height: 100%;
+  border-radius: 5px 0 0 5px; /* Keep rounded left edge for passenger bar */
+}
+
+/* Optional: Remove right border radius on passenger bar so packages bar is flush */
+.passengers {
+  background-color: #d3a73e; /* golden brown */
+  border-radius: 5px 0 0 5px; 
+}
+
+.packages {
+  background-color: #2f6a18; /* blue */
+  border-radius: 0 5px 5px 0; /* rounded on right edge */
+}
+
+.bar-labels.top-labels {
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px; /* same as bar container width */
+  margin: 0 auto 12px; /* center it and add bottom margin */
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+}
+
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .location-section {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  .location-left,
+  .location-right {
+    flex: 1 1 100%;
+  }
+  .location-left p {
+    max-width: 100%;
+  }
+  .bar-labels {
+    max-width: 100%;
+  }
 }
 
 
@@ -303,7 +404,7 @@ header {
   width: 100%;
   padding: 60px ; 
   text-align: center;
-  background-color: #7E6326;
+  background-color: #b18516;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -348,6 +449,9 @@ header {
     background-color: #ffffff;
 }
 
+
+
+
 .routes {
     width: 100%;
     height: 100vh;
@@ -355,4 +459,101 @@ header {
     padding-bottom: 100px;
     text-align: center;
     background-color: #d1d1d1;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 100px;
+  padding: 120px 60px;
+  background-color: #f5f5f5;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+}
+
+.contact-icon {
+  font-size: 45px;
+  color: #7e6326;
+  margin-bottom: 30px;
+}
+
+.contact-title {
+  font-family: 'Poppins';
+  font-size: 18px;      
+  font-weight: 500;
+  margin-bottom: 12px;  
+  color: #4d4d4d;
+}
+
+.contact-item p {
+  font-family: 'Poppins';
+  font-size: 14px;
+  color: #565656;
+  line-height:1.8;
+}
+
+.credits-section {
+  width: 100%;
+  background-color: #f5f5f5;  /* match your site’s style */
+  border-top: 1px solid #ccc;
+  padding: 35px 40px;
+  box-sizing: border-box;
+}
+
+.credits-container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+
+.credits-container p {
+  margin: 0;
+  flex: 1 1 200px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  flex: 1 1 200px;
+  justify-content: flex-end;
+}
+
+.social-icons a {
+  color: #7e6326;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ad7f36; /* golden brown highlight */
+}
+
+/* Responsive: stack content vertically on small screens */
+@media (max-width: 600px) {
+  .credits-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .credits-container p,
+  .social-icons {
+    flex: unset;
+    justify-content: center;
+  }
 }

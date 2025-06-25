@@ -17,10 +17,12 @@
           <h1>Western</h1>
           <ul>
               <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
+              
               <li><a href="#pricing">Pricing</a></li>
               <li><a href="#services">Services</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contacts">Contacts</a></li>
+              
               
           </ul>
       </nav>
@@ -30,7 +32,7 @@
   <section class="hero" id="home">
       <h2>Getting you to your destination</h2>
       <h3>Take a step towards your goals with us</h3>
-      <a href="#" class="hero-button">Reach out</a>
+      <a href="#contacts" class="hero-button">Reach Out</a>
   </section>
 
   <section class="services" id="services">
@@ -62,17 +64,63 @@
 
   </section>
 
-  <section class="pricing" id="pricing">
-    <h2> Featured Work</h2>
-  </section>
+<section class="location-section">
+  <div class="location-inner">
+    <div class="location-left">
+      <h2>Our Reach Across Europe</h2>
+      <p>
+        We proudly serve multiple countries with reliable transport services for passengers and packages, ensuring timely and safe delivery every time.
+      </p>
+    </div>
+
+    <div class="location-right">
+      <div class="bar-labels top-labels">
+        <span>Passengers</span>
+        <span>Packages</span>
+      </div>
+
+      <div class="country-line">
+        <div class="country-label">Germany</div>
+        <div class="bar-container">
+          <div class="bar passengers" style="width: 70%;"></div>
+          <div class="bar packages" style="width: 30%;"></div>
+        </div>
+      </div>
+
+      <div class="country-line">
+        <div class="country-label">France</div>
+        <div class="bar-container">
+          <div class="bar passengers" style="width: 50%;"></div>
+          <div class="bar packages" style="width: 50%;"></div>
+        </div>
+      </div>
+
+      <div class="country-line">
+        <div class="country-label">Austria</div>
+        <div class="bar-container">
+          <div class="bar passengers" style="width: 40%;"></div>
+          <div class="bar packages" style="width: 60%;"></div>
+        </div>
+      </div>
+
+      <div class="country-line">
+        <div class="country-label">Belgium</div>
+        <div class="bar-container">
+          <div class="bar passengers" style="width: 55%;"></div>
+          <div class="bar packages" style="width: 45%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
   <section class="quote">
     <h2>Get in touch with travel experts with 15+ years experience</h2>
-    <a href="#contact" class="quote-button">Reach out</a>
+    <a href="#contacts" class="quote-button">Reach out</a>
   </section>
 
-  <section class="reviews" id="reviews">
+  <section class="reviews" id="testimonials">
     <h2>Our Clients Say</h2>
     <p class="reviews-subtitle">
       Real experiences from travelers who trusted us to get them there.
@@ -93,40 +141,54 @@
 
     <div class="review-box">
       <div class="review-content right-avatar">
+        <img src="images/Profile2.jpg" alt="Client photo" class="review-avatar">
         <div>
           <p class="review-text">
             "Everything arrived safely and on time. I even tracked my package live. Super reliable service!"
           </p>
           <p class="review-author">– Monica R.</p>
         </div>
-        <img src="images/Profile2.jpg" alt="Client photo" class="review-avatar">
+        
       </div>
     </div>
   </div>
   </section>
 
-
   
-
-  <section class="routes">
-  
-  <footer class="contact-footer">
+  <section class="contact-section" id="contacts">
     <div class="contact-item">
       <i class="fas fa-home contact-icon"></i>
-      <p>1234 Sample Street, City, Country</p>
+      <h4 class="contact-title">Address</h4>
+      <p>Onisifor Ghibu St, MD-2051, <br>Chisinau, Moldova</p>
     </div>
     <div class="contact-item">
       <i class="fas fa-phone contact-icon"></i>
-      <p>+123 456 7890</p>
+      <h4 class="contact-title">Phone</h4>
+      <p>+37369020202</p>
     </div>
     <div class="contact-item">
       <i class="fas fa-envelope contact-icon"></i>
-      <p>info@example.com</p>
+      <h4 class="contact-title">Email</h4>
+      <p>WesternSprint@gmail.com</p>
     </div>
-</footer>
+  </section>
 
-
-
+  <section class="credits-section">
+    <div class="credits-container">
+      <p>© Western Sprint, all rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://wa.me/your-number" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://t.me/yourusername" target="_blank" aria-label="Telegram">
+          <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </section>
 
 <script>
   const navbar = document.querySelector('.navbar');
