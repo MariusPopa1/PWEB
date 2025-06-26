@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My landing page</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <header>
+      <nav class="navbar">    
+          <h1>Western</h1>
+
+          <button class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+              <span class="burger-bar"></span>
+              <span class="burger-bar"></span>
+              <span class="burger-bar"></span>
+            </button>
+          <ul>
+
+            
+              <li><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#stats">Countries</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contacts">Contacts</a></li>
+              
+              
+          </ul>
+      </nav>
+  </header>
+  
+
+  <section class="hero" id="home">
+      <h2>Getting you to your destination</h2>
+      <h3>Take a step towards your goals with us</h3>
+      <a href="#contacts" class="hero-button">Reach Out</a>
+  </section>
+
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <p class="section-subtitle">From people to packages and cars, we deliver secure, reliable transportation to central Europe—quick, convenient, and tailored to your needs.</p>
+
+    <div class="service-container">
+      <div class="service-box">
+        <i class="fa-solid fa-bus bus-icon"></i>
+        <h3>Comfortable travel</h3>
+        <p>Travel comfortably with safe, punctual transport services.</p>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-box package-icon"></i> <!-- box/package icon -->
+        <h3>Fast delivery</h3>
+        <p>Ship packages quickly across borders with real-time tracking included.</p>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-user person-icon"></i> <!-- person icon -->
+        <h3>Car transportation</h3>
+        <p>Move your beloved car with confidence in its security.</p>
+      </div>
+      <div class="service-box">
+        <i class="fas fa-car car-icon"></i> <!-- car icon -->
+        <h3>Specific dispatch</h3>
+        <p>Cheap, to-door services for both people and packages!</p>
+      </div>
+    </div>
+
+  </section>
+
+<section class="location-section" id="stats">
+  <div class="location-inner">
+    <div class="location-left">
+      <h2>Our Reach Across Europe</h2>
+      <p>
+        We proudly serve multiple countries with reliable transport services for passengers and packages, ensuring timely and safe delivery every time.
+      </p>
+    </div>
+
+    <div class="location-right">
+      <div class="bar-labels top-labels">
+        <span>Passengers</span>
+        <span>Packages</span>
+      </div>
+
+      <div class="country-line">
+        <div class="country-label">Germany</div>
+        <div class="bar-container">
+          <div class="bar passengers" style="width: 70%;"></div>
+          <div class="bar packages" style="width: 30%;"></div>
+        </div>
+      </div>
+
+      <div class="country-line">
+        <div class="country-label">France</div>
+        <div class="bar-container">
+          <div class="bar passengers" style="width: 50%;"></div>
+          <div class="bar packages" style="width: 50%;"></div>
+        </div>
+      </div>
+
+      <div class="country-line">
+        <div class="country-label">Austria</div>
+        <div class="bar-container">
+          <div class="bar passengers" style="width: 40%;"></div>
+          <div class="bar packages" style="width: 60%;"></div>
+        </div>
+      </div>
+
+      <div class="country-line">
+        <div class="country-label">Belgium</div>
+        <div class="bar-container">
+          <div class="bar passengers" style="width: 55%;"></div>
+          <div class="bar packages" style="width: 45%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section class="quote">
+    <h2>Get in touch with travel experts with 15+ years experience</h2>
+    <a href="#contacts" class="quote-button">Reach out</a>
+  </section>
+
+  <section class="reviews" id="testimonials">
+    <h2>Our Clients Say</h2>
+    <p class="reviews-subtitle">
+      Real experiences from travelers who trusted us to get them there.
+    </p>
+
+  <div class="review-container">
+      <div class="review-box">
+        <div class="review-content left-avatar">
+        <img src="images/Profile1.jpg" alt="Client photo" class="review-avatar">
+          <div>
+            <p class="review-text">
+              "Traveling with this service was seamless! Friendly driver and comfortable ride — definitely booking again for my next trip."
+            </p>
+            <p class="review-author">– Alex T.</p>
+          </div>
+        </div>
+      </div>
+
+    <div class="review-box">
+      <div class="review-content right-avatar">
+        <img src="images/Profile2.jpg" alt="Client photo" class="review-avatar">
+        <div>
+          <p class="review-text">
+            "Everything arrived safely and on time. I even tracked my package live. Super reliable service!"
+          </p>
+          <p class="review-author">– Monica R.</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  </section>
+
+  
+  <section class="contact-section" id="contacts">
+    <div class="contact-item">
+      <i class="fas fa-home contact-icon"></i>
+      <h4 class="contact-title">Address</h4>
+      <p>Onisifor Ghibu St, MD-2051, <br>Chisinau, Moldova</p>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-phone contact-icon"></i>
+      <h4 class="contact-title">Phone</h4>
+      <p>+37369020202</p>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-envelope contact-icon"></i>
+      <h4 class="contact-title">Email</h4>
+      <p>WesternSprint@gmail.com</p>
+    </div>
+  </section>
+
+  <section class="credits-section">
+    <div class="credits-container">
+      <p>© Western Sprint, all rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://wa.me/your-number" target="_blank" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://t.me/yourusername" target="_blank" aria-label="Telegram">
+          <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<script>
+  const navbar = document.querySelector('.navbar');
+
+
+  window.addEventListener('scroll', () => {
+
+
+    if (window.scrollY >  80) { // adjust 80 to trigger sooner/later
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+</script>
+
+<script>
+  const burger = document.querySelector('.burger');
+  const navMenu = document.querySelector('.navbar ul');
+
+  burger.addEventListener('click', () => {
+    const expanded = burger.getAttribute('aria-expanded') === 'true' || false;
+    burger.setAttribute('aria-expanded', !expanded);
+    navMenu.classList.toggle('show');
+  });
+</script>
+
+
+
+
+
+  </body>
+</html>
