@@ -64,7 +64,6 @@ header {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 450;
-    transition: color 0.3s ease;
 }
 
 .navbar.scrolled ul li a:hover,
@@ -150,7 +149,7 @@ header {
   background-position: center;
   text-align: center; /* Important for small screenssssss */
   padding: 0 20px; /* Prevent text overflow on small screens */
-  
+
 }
 
 .hero-content {
@@ -186,7 +185,7 @@ header {
     background-color: #7E6326;
     border-radius: 20px;
     text-decoration: none;
-    transition: background 0.3s ease, color 0.3 ease;
+    transition: background 0.3s ease, color 0.3s ease;
     font-family: 'Poppins';
     letter-spacing: 0.3px;
 }
@@ -604,3 +603,63 @@ header {
     justify-content: center;
   }
 }
+
+
+
+.mascot:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+
+
+.mascot-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  transition: opacity 0.6s ease;
+}
+
+.mascot {
+  width: clamp(50px, 7vw, 80px);
+  height: auto;
+  cursor: pointer;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.mascot-peek {
+  position: fixed;
+  top: 80%;
+  left: -120px; 
+  transform: rotate(90deg);
+  z-index: 1000;
+  transition: left 1.3s ease-in-out;
+  width: clamp(80px, 6vw, 100px);
+  pointer-events: none;
+}
+
+.mascot-peek img {
+  width: clamp(50px, 6vw, 90px);
+  height: auto;
+}
+
+/* When active: 30% visible (adjust depending on image size) */
+.mascot-peek.active {
+  left: -30px;
+}
+

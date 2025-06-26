@@ -224,9 +224,37 @@
   });
 </script>
 
+<div class="mascot-peek hidden">
+  <img src="images/mascot.png" alt="Mascot peeking" />
+</div>
 
 
+<div class="mascot-wrapper hidden">
+  <img src="images/mascot.png" alt="Mascot" class="mascot" />
+</div>
 
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      document.querySelector('.mascot-wrapper').classList.remove('hidden');
+      document.querySelector('.mascot-wrapper').classList.add('visible');
+    }, 6000); // 5000 milliseconds = 5 seconds
+  });
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const peek = document.querySelector('.mascot-peek');
+    setTimeout(() => {
+      peek.classList.remove('hidden');
+      peek.classList.add('active');
+      
+      // Slide back after 1 second
+      setTimeout(() => {
+        peek.classList.remove('active');
+      }, 2000);
+    }, 2000); // Start 2 seconds after load
+  });
+</script>
 
   </body>
 </html>
