@@ -148,8 +148,9 @@ header {
   background-image: url('images/test.JPG');
   background-size: cover;
   background-position: center;
-  text-align: center; /* Important for small screens */
+  text-align: center; /* Important for small screenssssss */
   padding: 0 20px; /* Prevent text overflow on small screens */
+  
 }
 
 .hero-content {
@@ -261,6 +262,8 @@ header {
     color: #999999;
     line-height: 1.6; 
 }
+
+
 
 
 .bus-icon,
