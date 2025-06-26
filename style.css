@@ -622,7 +622,7 @@ header {
 }
 
 .mascot {
-  width: 80px;
+  width: clamp(50px, 7vw, 80px);
   height: auto;
   cursor: pointer;
   animation: float 3s ease-in-out infinite;
@@ -649,18 +649,17 @@ header {
   left: -120px; 
   transform: rotate(90deg);
   z-index: 1000;
-  transition: left 0.8s ease;
-  width: 120px;
+  transition: left 1.3s ease-in-out;
+  width: clamp(80px, 6vw, 100px);
   pointer-events: none;
 }
 
 .mascot-peek img {
-  width: 70%;
+  width: clamp(50px, 6vw, 90px);
   height: auto;
 }
 
 /* When active: 30% visible (adjust depending on image size) */
 .mascot-peek.active {
-  left: -40px;
+  left: -30px;
 }
-
