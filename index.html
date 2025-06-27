@@ -10,18 +10,19 @@
     <title>My landing page</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dist/output.css" />
   </head>
   <body>
     
     <header>
       <nav class="navbar">    
           <h1>Western</h1>
-
-          <button class="burger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
-              <span class="burger-bar"></span>
-              <span class="burger-bar"></span>
-              <span class="burger-bar"></span>
-            </button>
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" hidden>
+          <label for="menu-toggle" class="burger" aria-label="Toggle menu">
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          <span class="burger-bar"></span>
+          </label>
           <ul>
 
             
@@ -123,10 +124,17 @@
 </section>
 
 
-  <section class="quote">
-    <h2>Get in touch with travel experts with 15+ years experience</h2>
-    <a href="#contacts" class="quote-button">Reach out</a>
-  </section>
+<section class="w-full py-8 px-6 text-center bg-[#b18516] flex flex-col items-center justify-center">
+  <h2 class="text-white font-poppins font-normal text-[clamp(22px,2.5vw,30px)] mb-8">
+    Get in touch with travel experts with 15+ years experience
+  </h2>
+  <a href="#contacts"
+     class="text-white font-poppins font-medium uppercase border border-white rounded-full 
+            px-[clamp(24px,2vw,40px)] py-[clamp(10px,1vw,15px)] transition-colors duration-300 
+            hover:bg-white hover:text-[#7E6326] inline-block">
+    Reach out
+  </a>
+</section>
 
   <section class="reviews" id="testimonials">
     <h2>Our Clients Say</h2>
@@ -201,41 +209,12 @@
 
 
 <a href="#contacts" class="mascot-wrapper hidden" aria-label="Go to contacts section">
-  <img src="images/mascot.png" alt="Mascot" class="mascot" />
-  <div class="mascot-message">Need more details? Click on me</div>
+  <img src="images/mascot.png" alt="Mascot" class="mascot" /> 
+  <div class="mascot-message">Need more details? Click on me</div> 
 </a>
 
 
-<script>
-  const navbar = document.querySelector('.navbar');
 
-
-  window.addEventListener('scroll', () => {
-
-
-    if (window.scrollY >  80) { 
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-  });
-
-</script>
-
-<script>
-  const burger = document.querySelector('.burger');
-  const navMenu = document.querySelector('.navbar ul');
-
-  burger.addEventListener('click', () => {
-    const expanded = burger.getAttribute('aria-expanded') === 'true' || false;
-    burger.setAttribute('aria-expanded', !expanded);
-    navMenu.classList.toggle('show');
-  });
-</script>
-
-<div class="mascot-peek hidden">
-  <img src="images/mascot.png" alt="Mascot peeking" />
-</div>
 
 
 <a href="#contacts" class="mascot-wrapper hidden">
@@ -243,28 +222,10 @@
   <div class="mascot-message">Need more details? Click on me</div>
 </a>
 
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-      document.querySelector('.mascot-wrapper').classList.remove('hidden');
-      document.querySelector('.mascot-wrapper').classList.add('visible');
-    }, 6000); 
-  });
-</script>
-<script>
-  window.addEventListener('DOMContentLoaded', () => {
-    const peek = document.querySelector('.mascot-peek');
-    setTimeout(() => {
-      peek.classList.remove('hidden');
-      peek.classList.add('active');
-      
-      
-      setTimeout(() => {
-        peek.classList.remove('active');
-      }, 2000);
-    }, 2000); 
-  });
-</script>
+
+<section class="bg-black text-white text-center py-10">
+  <p class="text-sm">This is a black section made with Tailwind CSS.</p>
+</section>
 
   </body>
 </html>
