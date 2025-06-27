@@ -4,13 +4,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My landing page</title>
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="dist/output.css" />
+    <link rel="stylesheet" href="style.css" />
+     
   </head>
   <body>
     
@@ -44,34 +44,56 @@
       <a href="#contacts" class="hero-button">Reach Out</a>
   </section>
 
-  <section class="services" id="services">
-    <h2>Our Services</h2>
-    <p class="section-subtitle">From people to packages and cars, we deliver secure, reliable transportation to central Europe—quick, convenient, and tailored to your needs.</p>
+<section id="services" class="w-full min-h-[80vh] pt-24 pb-24 bg-white text-center">
+  <h2 class="text-black font-poppins text-[clamp(30px,2.5vw,40px)] font-normal mb-5">
+    Our Services
+  </h2>
+  <p class="text-gray-500 font-poppins text-[clamp(13px,1.5vw,16px)] max-w-[35%] mx-auto mb-5 leading-relaxed">
+    From people to packages and cars, we deliver secure, reliable transportation to central Europe—quick, convenient, and tailored to your needs.
+  </p>
 
-    <div class="service-container">
-      <div class="service-box">
-        <i class="fa-solid fa-bus bus-icon"></i>
-        <h3>Comfortable travel</h3>
-        <p>Travel comfortably with safe, punctual transport services.</p>
-      </div>
-      <div class="service-box">
-        <i class="fas fa-box package-icon"></i>
-        <h3>Fast delivery</h3>
-        <p>Ship packages quickly across borders with real-time tracking included.</p>
-      </div>
-      <div class="service-box">
-        <i class="fas fa-user person-icon"></i> 
-        <h3>Car transportation</h3>
-        <p>Move your beloved car with confidence in its security.</p>
-      </div>
-      <div class="service-box">
-        <i class="fas fa-car car-icon"></i> 
-        <h3>Specific dispatch</h3>
-        <p>Cheap, to-door services for both people and packages!</p>
-      </div>
+  <div class="flex flex-wrap justify-center gap-8 mt-8">
+    <div class="w-2/5 p-5 rounded-lg text-center bg-transparent">
+      <i class="fa-solid fa-bus text-[#7e6326] text-[clamp(26px,2.3vw,32px)] mb-2"></i>
+      <h3 class="font-poppins text-[clamp(16px,1.5vw,18px)] font-normal text-black mt-5 mb-5 leading-relaxed">
+        Comfortable travel
+      </h3>
+      <p class="text-gray-400 text-[clamp(12px,1.2vw,14px)] leading-relaxed">
+        Travel comfortably with safe, punctual transport services.
+      </p>
     </div>
 
-  </section>
+    <div class="w-2/5 p-5 rounded-lg text-center bg-transparent">
+      <i class="fas fa-box text-[#7e6326] text-[clamp(26px,2.3vw,32px)] mb-2"></i>
+      <h3 class="font-poppins text-[clamp(16px,1.5vw,18px)] font-normal text-black mt-5 mb-5 leading-relaxed">
+        Fast delivery
+      </h3>
+      <p class="text-gray-400 text-[clamp(12px,1.2vw,14px)] leading-relaxed">
+        Ship packages quickly across borders with real-time tracking included.
+      </p>
+    </div>
+
+    <div class="w-2/5 p-5 rounded-lg text-center bg-transparent">
+      <i class="fas fa-user text-[#7e6326] text-[clamp(26px,2.3vw,32px)] mb-2"></i>
+      <h3 class="font-poppins text-[clamp(16px,1.5vw,18px)] font-normal text-black mt-5 mb-5 leading-relaxed">
+        Car transportation
+      </h3>
+      <p class="text-gray-400 text-[clamp(12px,1.2vw,14px)] leading-relaxed">
+        Move your beloved car with confidence in its security.
+      </p>
+    </div>
+
+    <div class="w-2/5 p-5 rounded-lg text-center bg-transparent">
+      <i class="fas fa-car text-[#7e6326] text-[clamp(26px,2.3vw,32px)] mb-2"></i>
+      <h3 class="font-poppins text-[clamp(16px,1.5vw,18px)] font-normal text-black mt-5 mb-5 leading-relaxed">
+        Specific dispatch
+      </h3>
+      <p class="text-gray-400 text-[clamp(12px,1.2vw,14px)] leading-relaxed">
+        Cheap, to-door services for both people and packages!
+      </p>
+    </div>
+  </div>
+</section>
 
 <section class="location-section" id="stats">
   <div class="location-inner">
@@ -124,20 +146,20 @@
 </section>
 
 
+
 <section class="w-full py-8 px-6 text-center bg-[#b18516] flex flex-col items-center justify-center">
   <h2 class="text-white font-poppins font-normal text-[clamp(22px,2.5vw,30px)] mb-8">
     Get in touch with travel experts with 15+ years experience
   </h2>
- <a href="#contacts"
-  style="border: 1px solid white !important;"
-  class="text-white font-poppins font-medium uppercase
-         text-[clamp(12px,1.2vw,18px)]
-         px-[clamp(24px,2vw,40px)] py-[clamp(10px,1vw,15px)] transition-all duration-300 
-         hover:bg-white hover:text-[#7E6326] hover:border-[#7E6326] inline-block  ">
+ <a href="#contacts" 
+   style="border: 1px solid white !important;"
+   class="text-white font-poppins font-medium uppercase rounded-full
+          text-[clamp(10px,1.2vw,18px)] px-[clamp(24px,2vw,40px)] py-[clamp(10px,1vw,15px)] transition-all duration-300
+          hover:bg-white hover:text-[#7E6326] hover:border-[#7E6326] inline-block">
   Reach out
 </a>
+</a>
 </section>
-
   <section class="reviews" id="testimonials">
     <h2>Our Clients Say</h2>
     <p class="reviews-subtitle">
@@ -224,10 +246,6 @@
   <div class="mascot-message">Need more details? Click on me</div>
 </a>
 
-
-<section class="bg-black text-white text-center py-10">
-  <p class="text-sm">This is a black section made with Tailwind CSS.</p>
-</section>
 
   </body>
 </html>
