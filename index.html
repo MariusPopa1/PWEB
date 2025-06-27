@@ -53,17 +53,23 @@
         <p>Travel comfortably with safe, punctual transport services.</p>
       </div>
       <div class="service-box">
-        <i class="fas fa-box package-icon"></i> <!-- box/package icon -->
+
+        <i class="fas fa-box package-icon"></i>
+
         <h3>Fast delivery</h3>
         <p>Ship packages quickly across borders with real-time tracking included.</p>
       </div>
       <div class="service-box">
-        <i class="fas fa-user person-icon"></i> <!-- person icon -->
+
+        <i class="fas fa-user person-icon"></i> 
+
         <h3>Car transportation</h3>
         <p>Move your beloved car with confidence in its security.</p>
       </div>
       <div class="service-box">
-        <i class="fas fa-car car-icon"></i> <!-- car icon -->
+
+        <i class="fas fa-car car-icon"></i> 
+
         <h3>Specific dispatch</h3>
         <p>Cheap, to-door services for both people and packages!</p>
       </div>
@@ -197,6 +203,16 @@
     </div>
   </section>
 
+
+
+
+<a href="#contacts" class="mascot-wrapper hidden" aria-label="Go to contacts section">
+  <img src="images/mascot.png" alt="Mascot" class="mascot" />
+  <div class="mascot-message">Need more details? Click on me</div>
+</a>
+
+
+
 <script>
   const navbar = document.querySelector('.navbar');
 
@@ -204,7 +220,9 @@
   window.addEventListener('scroll', () => {
 
 
-    if (window.scrollY >  80) { // adjust 80 to trigger sooner/later
+
+    if (window.scrollY >  80) { 
+
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
@@ -225,7 +243,38 @@
 </script>
 
 
+<div class="mascot-peek hidden">
+  <img src="images/mascot.png" alt="Mascot peeking" />
+</div>
 
+
+<a href="#contacts" class="mascot-wrapper hidden">
+  <img src="images/mascot.png" alt="Mascot" class="mascot" />
+  <div class="mascot-message">Need more details? Click on me</div>
+</a>
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      document.querySelector('.mascot-wrapper').classList.remove('hidden');
+      document.querySelector('.mascot-wrapper').classList.add('visible');
+    }, 6000); 
+  });
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const peek = document.querySelector('.mascot-peek');
+    setTimeout(() => {
+      peek.classList.remove('hidden');
+      peek.classList.add('active');
+      
+      
+      setTimeout(() => {
+        peek.classList.remove('active');
+      }, 2000);
+    }, 2000); 
+  });
+</script>
 
 
   </body>
