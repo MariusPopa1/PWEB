@@ -148,8 +148,10 @@ header {
   background-image: url('images/test.JPG');
   background-size: cover;
   background-position: center;
+
   text-align: center; 
   padding: 0 20px; 
+
 
 }
 
@@ -262,8 +264,6 @@ header {
     color: #999999;
     line-height: 1.6; 
 }
-
-
 
 
 .bus-icon,
@@ -447,7 +447,6 @@ header {
 
 
 
-
 .quote {
   width: 100%;
   padding: 30px ; 
@@ -550,6 +549,7 @@ header {
 .credits-section {
   width: 100%;
   background-color: #f5f5f5; 
+
   border-top: 1px solid #ccc;
   padding: 35px 40px;
   box-sizing: border-box;
@@ -587,8 +587,10 @@ header {
 }
 
 .social-icons a:hover {
+
   color: #ad7f36; 
 }
+
 
 @media (max-width: 600px) {
   .credits-container {
@@ -603,6 +605,7 @@ header {
     justify-content: center;
   }
 }
+
 
 
 
@@ -686,3 +689,4 @@ header {
 .mascot-wrapper:hover .mascot-message {
   display: block;
 }
+
