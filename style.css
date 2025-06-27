@@ -22,12 +22,12 @@ header {
   z-index: 10;
 }
 
-/* NAVBAR */
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 10px 40px;
   flex-wrap: wrap;
 }
 
