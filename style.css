@@ -1,25 +1,28 @@
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
 }
 
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Lora', serif;
+  font-family: 'Lora', serif;
 }
 
 header {
-    position: fixed; 
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 10; 
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: 0 1px 1px rgba(157, 157, 157, 0.462);
+  z-index: 10;
+
 }
 
 
@@ -27,68 +30,62 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+
+  padding: 10px 40px;
+
   flex-wrap: wrap;
 }
 
 .navbar h1 {
-  color: #ffffff;
-  font-size:clamp(24px, 2.5vw, 36px);
+
+  color: rgb(67, 67, 67);
+  font-size: clamp(24px, 2.5vw, 36px);
   font-weight: 500;
-  margin-left: 0; 
-  flex: 1; 
-  padding-left: 20px; 
-  transition: color 0.3s ease;
+  margin-left: 0;
+  flex: 1;
+  padding-left: 20px;
 }
 
 .navbar ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
 }
 
 .navbar ul li {
-    list-style: none;
+  list-style: none;
 }
 
 .navbar ul li a {
-    
-    color: rgb(255, 255, 255);
-    font-family: 'Poppins', Helventica;
-    font-size: 12px;
-    padding: 10px 16px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: color 0.4s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 450;
-    transition: color 0.3s ease;
+  color: rgb(67, 67, 67);
+  font-family: 'Poppins', Helvetica;
+  font-size: 12px;
+  padding: 4px 16px; 
+  line-height: 1.5; 
+  border-radius: 5px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 450;
 }
 
-.navbar.scrolled ul li a:hover,
+
 .navbar ul li a:hover {
-    color: #f5af00; 
-    background-color: transparent; 
+  color: #f5af00;
 }
 
-.navbar.scrolled {
-    background-color: white;
-    box-shadow: 0 1px 1px rgba(157, 157, 157, 0.462);
+.menu-toggle:checked + .burger + ul {
+  display: flex !important;
+
+
 }
-
-.navbar.scrolled h1,
-.navbar.scrolled ul li a {
-    color: rgb(67, 67, 67);  
-}
-
-
-
 
 
 .burger {
-  display: none; 
+  display: none;
+
   flex-direction: column;
   justify-content: space-around;
   width: 30px;
@@ -97,15 +94,13 @@ header {
   border: none;
   cursor: pointer;
   padding: 0;
-  margin-left: auto; 
-  transition: color 0.3s ease;
+
+  margin-left: auto;
   color: #7e6326;
 }
 
-.burger:hover,
-.burger:focus {
-  color: #ad7f36; 
-}
+
+
 
 .burger-bar {
   width: 100%;
@@ -117,20 +112,20 @@ header {
 
 @media (max-width: 768px) {
   .navbar ul {
-    display: none; 
+
+    display: none;
     flex-direction: column;
     background-color: rgb(131, 131, 131);
     position: absolute;
-    top: 70px; 
-    right: -30px; 
+    top: 70px;
+    right: -30px;
     width: 180px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 100;
   }
-  .navbar ul.show {
-    display: flex;
-  }
+
+
   .burger {
     display: flex;
   }
@@ -148,17 +143,8 @@ header {
   background-image: url('images/test.JPG');
   background-size: cover;
   background-position: center;
-
-  text-align: center; 
-  padding: 0 20px; 
-
-
-}
-
-.hero-content {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
+  text-align: center;
+  padding: 0 20px;
 }
 
 
@@ -166,36 +152,39 @@ header {
   font-size: clamp(24px, 3vw, 45px);
   font-family: "Poppins";
   color: white;
-  text-align: center;
   margin-bottom: 20px;
-  word-break: break-word;
+
+
 }
 
 .hero h3 {
   font-size: clamp(14px, 1.2vw, 20px);
   color: #ddd;
-  text-align: center;
+
   font-family: "Poppins";
 }
 
 .hero-button {
-    display: inline-block;
-    font-size: clamp(14px, 1.2vw, 18px);
-    padding: clamp(12px, 1vw, 15px) clamp(24px, 2vw, 40px);
-    margin-top: 40px;
-    font-weight: 400;
-    color: rgb(255, 255, 255);
-    background-color: #7E6326;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: background 0.3s ease, color 0.3 ease;
-    font-family: 'Poppins';
-    letter-spacing: 0.3px;
+
+  display: inline-block;
+  font-size: clamp(14px, 1.2vw, 18px);
+  padding: clamp(12px, 1vw, 15px) clamp(24px, 2vw, 40px);
+  margin-top: 40px;
+  font-weight: 400;
+  color: white;
+  background-color: #7E6326;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-family: 'Poppins';
+  letter-spacing: 0.3px;
 }
 
 .hero-button:hover {
-    background-color: rgb(30, 30, 30);
+  background-color: rgb(30, 30, 30);
 }
+
+
 
 
 
@@ -274,10 +263,6 @@ header {
   font-size: clamp(26px,2.3vw,32px); 
   margin: 5px; 
 }
-
-
-
-
 
 
 
@@ -608,13 +593,6 @@ header {
 
 
 
-
-.mascot:hover {
-  transform: scale(1.1) rotate(5deg);
-}
-
-
-
 .mascot-wrapper {
   position: fixed;
   bottom: 20px;
@@ -625,14 +603,24 @@ header {
   gap: 12px;
   cursor: pointer;
   text-decoration: none;
-  transition: opacity 0.6s ease;
+
+
   flex-direction: row-reverse;
+  opacity: 0;
+  pointer-events: none;
+  animation: showMascot 1s ease-in-out 6s forwards;
 }
+
+@keyframes showMascot {
+  to {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
 
 .mascot {
   width: clamp(50px, 7vw, 80px);
   height: auto;
-  cursor: pointer;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -641,35 +629,25 @@ header {
   50% { transform: translateY(-8px); }
 }
 
-.hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-.visible {
-  opacity: 1;
-  pointer-events: auto;
-}
 
 
 .mascot-peek {
   position: fixed;
   top: 80%;
-  left: -120px; 
+  left: -120px;
   transform: rotate(90deg);
   z-index: 1000;
-  transition: left 1.3s ease-in-out;
   width: clamp(80px, 6vw, 100px);
   pointer-events: none;
+  animation: peekInOut 4s ease-in-out 2s forwards;
 }
 
-.mascot-peek img {
-  width: clamp(50px, 6vw, 90px);
-  height: auto;
-}
+@keyframes peekInOut {
+  0% { left: -120px; }
+  20% { left: -30px; }
+  80% { left: -30px; }
+  100% { left: -120px; }
 
-
-.mascot-peek.active {
-  left: -30px;
 }
 
 .mascot-message {
@@ -678,10 +656,12 @@ header {
   color: white;
   padding: clamp(4px, 0.6vw, 10px) clamp(4px, 1.2vw, 18px);
   border-radius: 20px;
-  font-family: 'Poppins', sans-serif;
+
+  font-family: 'Poppins';
   font-size: clamp(7px, 1.2vw, 16px);
   white-space: nowrap;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
   user-select: none;
 }
 
