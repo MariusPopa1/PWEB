@@ -1,8 +1,10 @@
 
 * {
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 
@@ -20,6 +22,7 @@ header {
   background-color: white;
   box-shadow: 0 1px 1px rgba(157, 157, 157, 0.462);
   z-index: 10;
+
 }
 
 
@@ -27,11 +30,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 10px 40px;
+
   flex-wrap: wrap;
 }
 
 .navbar h1 {
+
   color: rgb(67, 67, 67);
   font-size: clamp(24px, 2.5vw, 36px);
   font-weight: 500;
@@ -79,6 +85,7 @@ header {
 
 .burger {
   display: none;
+
   flex-direction: column;
   justify-content: space-around;
   width: 30px;
@@ -87,9 +94,11 @@ header {
   border: none;
   cursor: pointer;
   padding: 0;
+
   margin-left: auto;
   color: #7e6326;
 }
+
 
 
 
@@ -103,6 +112,7 @@ header {
 
 @media (max-width: 768px) {
   .navbar ul {
+
     display: none;
     flex-direction: column;
     background-color: rgb(131, 131, 131);
@@ -114,6 +124,7 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 100;
   }
+
 
   .burger {
     display: flex;
@@ -136,12 +147,13 @@ header {
   padding: 0 20px;
 }
 
+
 .hero h2 {
   font-size: clamp(24px, 3vw, 45px);
   font-family: "Poppins";
   color: white;
-
   margin-bottom: 20px;
+
 
 }
 
@@ -153,6 +165,7 @@ header {
 }
 
 .hero-button {
+
   display: inline-block;
   font-size: clamp(14px, 1.2vw, 18px);
   padding: clamp(12px, 1vw, 15px) clamp(24px, 2vw, 40px);
@@ -170,6 +183,7 @@ header {
 .hero-button:hover {
   background-color: rgb(30, 30, 30);
 }
+
 
 
 
@@ -241,8 +255,6 @@ header {
 }
 
 
-
-
 .bus-icon,
 .person-icon,
 .package-icon,
@@ -251,10 +263,6 @@ header {
   font-size: clamp(26px,2.3vw,32px); 
   margin: 5px; 
 }
-
-
-
-
 
 
 
@@ -424,7 +432,6 @@ header {
 
 
 
-
 .quote {
   width: 100%;
   padding: 30px ; 
@@ -527,6 +534,7 @@ header {
 .credits-section {
   width: 100%;
   background-color: #f5f5f5; 
+
   border-top: 1px solid #ccc;
   padding: 35px 40px;
   box-sizing: border-box;
@@ -564,8 +572,10 @@ header {
 }
 
 .social-icons a:hover {
+
   color: #ad7f36; 
 }
+
 
 @media (max-width: 600px) {
   .credits-container {
@@ -583,10 +593,6 @@ header {
 
 
 
-
-
-
-
 .mascot-wrapper {
   position: fixed;
   bottom: 20px;
@@ -597,6 +603,7 @@ header {
   gap: 12px;
   cursor: pointer;
   text-decoration: none;
+
 
   flex-direction: row-reverse;
   opacity: 0;
@@ -609,12 +616,11 @@ header {
     opacity: 1;
     pointer-events: auto;
   }
-}
+
 
 .mascot {
   width: clamp(50px, 7vw, 80px);
   height: auto;
-
   animation: float 3s ease-in-out infinite;
 }
 
@@ -625,14 +631,12 @@ header {
 
 
 
-
 .mascot-peek {
   position: fixed;
   top: 80%;
   left: -120px;
   transform: rotate(90deg);
   z-index: 1000;
-
   width: clamp(80px, 6vw, 100px);
   pointer-events: none;
   animation: peekInOut 4s ease-in-out 2s forwards;
@@ -643,6 +647,7 @@ header {
   20% { left: -30px; }
   80% { left: -30px; }
   100% { left: -120px; }
+
 }
 
 .mascot-message {
@@ -651,10 +656,12 @@ header {
   color: white;
   padding: clamp(4px, 0.6vw, 10px) clamp(4px, 1.2vw, 18px);
   border-radius: 20px;
+
   font-family: 'Poppins';
   font-size: clamp(7px, 1.2vw, 16px);
   white-space: nowrap;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+
   user-select: none;
 }
 
@@ -662,3 +669,4 @@ header {
 .mascot-wrapper:hover .mascot-message {
   display: block;
 }
+
