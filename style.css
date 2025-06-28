@@ -612,8 +612,9 @@ header {
 }
 
 .mascot {
-  width: clamp(50px, 7vw, 80px);
-  height: auto;
+  width: clamp(30px, 5vw, 60px) !important;
+  height: auto !important;
+
 
   animation: float 3s ease-in-out infinite;
 }
